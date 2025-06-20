@@ -14,7 +14,7 @@ xmlUtil = "0.91.0"
 room = "2.6.1"
 hilt-version = "2.49"
 ksp-version = "2.0.0-1.0.24"
-coilVersion = "1.4.0"
+coilVersion = "2.1.0"
 recyclerviewVersion = "1.2.1"
 navigationUiKtx = "2.8.7"
 kotlinxCoroutines = "1.9.0"
@@ -24,6 +24,7 @@ activity = "1.10.1"
 constraintlayout = "2.2.1"
 testng = "6.9.6"
 junitJunit = "4.12"
+orbit = "4.3.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,7 +45,7 @@ retrofit2 = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofi
 retrofit2-kotlinx-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofit2KotlinxSerializationConverter" }
 xmlutil-core = { group = "io.github.pdvrieze.xmlutil", name = "core", version.ref = "xmlUtil"  }
 xmlutil-serialization = { group = "io.github.pdvrieze.xmlutil", name = "serialization", version.ref = "xmlUtil"  }
-coil = { group = "io.coil-kt", name = "coil", version.ref = "coilVersion" }
+coil = { group = "io.coil-kt", name = "coil-compose", version.ref = "coilVersion" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt-version" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-version" }
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room"}
@@ -61,6 +62,9 @@ androidx-activity = { group = "androidx.activity", name = "activity", version.re
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 testng = { group = "org.testng", name = "testng", version.ref = "testng" }
 junit-junit = { group = "junit", name = "junit", version.ref = "junitJunit" }
+orbit-core = { group = "org.orbit-mvi", name = "orbit-core", version.ref = "orbit" }
+orbit-compose = { group = "org.orbit-mvi", name = "orbit-compose", version.ref = "orbit" }
+orbit-viewmodel = { group = "org.orbit-mvi", name = "orbit-viewmodel", version.ref = "orbit" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
