@@ -31,55 +31,55 @@ fun CurrencyCard(
     val customTypography = LocalCustomTypography.current
 
     Row(
-    modifier = Modifier
-        .fillMaxWidth()
-        .height(90.dp)
-        .padding(horizontal = 4.dp)
-        .clip(RoundedCornerShape(8.dp))
-        .background(Color.White)
-        .clickable { onClick() },
-    verticalAlignment = Alignment.CenterVertically
-) {
-    CurrencyImage(
         modifier = Modifier
-            .size(60.dp)
-            .padding(start = 8.dp),
-        image = ""
-    )
-
-    Column(
-        modifier = Modifier
-            .fillMaxHeight()
-            .padding(start = 12.dp),
-        verticalArrangement = Arrangement.Center
+            .fillMaxWidth()
+            .height(90.dp)
+            .padding(horizontal = 4.dp)
+            .clip(RoundedCornerShape(8.dp))
+            .background(Color.White)
+            .clickable { onClick() },
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(
-            text = "USD",
+        CurrencyImage(
             modifier = Modifier
-                .width(200.dp)
-                .padding(bottom = 8.dp),
-            style = customTypography.bigDescription.copy(
-                fontWeight = FontWeight.Bold
-            )
-        )
-        Text(
-            text = "US dollar",
-            modifier = Modifier
-                .padding(bottom = 4.dp),
-            style = customTypography.description
+                .size(60.dp)
+                .padding(start = 8.dp),
+            image = ""
         )
 
-        Text(
-            text = "Balance",
-            style = customTypography.smallDescription
-        )
+        Column(
+            modifier = Modifier
+                .fillMaxHeight()
+                .padding(start = 12.dp),
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = "USD",
+                modifier = Modifier
+                    .width(200.dp)
+                    .padding(bottom = 8.dp),
+                style = customTypography.bigDescription.copy(
+                    fontWeight = FontWeight.Bold
+                )
+            )
+            Text(
+                text = "US dollar",
+                modifier = Modifier
+                    .padding(bottom = 4.dp),
+                style = customTypography.description
+            )
+
+            Text(
+                text = "Balance",
+                style = customTypography.smallDescription
+            )
+        }
     }
-}
 
 }
 
 @Preview
 @Composable
 fun PreviewCurrencyCard() {
-    CurrencyCard() {}
+    CurrencyCard {}
 }

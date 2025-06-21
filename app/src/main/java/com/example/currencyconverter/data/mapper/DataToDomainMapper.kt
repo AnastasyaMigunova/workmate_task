@@ -20,7 +20,7 @@ class DataToDomainMapper @Inject constructor() {
 
     fun AccountDbo.toDomain(): Account =
         Account(
-            currency = Currency.valueOf(code),
+            code = Currency.valueOf(code),
             amount = amount
         )
 

@@ -9,12 +9,12 @@ import com.example.currencyconverter.domain.repository.RatesRepository
 import javax.inject.Inject
 
 class RatesRepositoryImpl @Inject constructor(
-    private val remote: RatesService,
+    private val ratesService: RatesService,
     private val accountDao: AccountDao,
     private val dataToDomainMapper: DataToDomainMapper
 ) : RatesRepository {
     override suspend fun getRates(base: Currency, amount: Double): List<Rate> {
-        val rates = remote.getRates(base.name, amount)
+        val rates = ratesService.getRates(base.name, amount)
         val accounts = accountDao.getAll().associateBy { Currency.valueOf(it.code) }
 
         return rates.map { rate ->
